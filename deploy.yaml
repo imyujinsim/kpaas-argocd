@@ -23,14 +23,15 @@ spec:
 ---
 apiVersion: v1
 kind: Service
-metedata :
+metadata:
   name: kpaas-ui
   namespace: kpaas
-  labels:
-    app: kpaas-ui
 spec:
-  selector:
-    app: kpaas-ui
   type: NodePort
-  port: 9090
-  targetPort: 5000
+  selector:
+    app.kubernetes.io/name: kpaas-ui
+  ports:
+      # 기본적으로 그리고 편의상 `targetPort` 는 `port` 필드와 동일한 값으로 설정된다.
+    - port: 9000
+      targetPort: 9000
+      nodePort: 9000
