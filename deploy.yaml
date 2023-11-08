@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: kpaas-ui-deployment
+  namespace: kpaas
   labels:
     app: kpaas-ui
 spec:
@@ -24,6 +25,7 @@ apiVersion: v1
 kind: Service
 metedata :
   name: kpaas-ui
+  namespace: kpaas
   labels:
     app: kpaas-ui
 spec:
