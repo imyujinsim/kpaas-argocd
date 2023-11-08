@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: kpaas-ui-deployment
+  name: kpaas-ui
   namespace: kpaas
   labels:
     app: kpaas-ui
@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: kpaas-ui
-        image: docker.io/imyujinsim/edu-msa-ui:${BUILD_NUMBER}
+        image: docker.io/imyujinsim/edu-msa-ui:43
         ports:
         - containerPort: 5000
 ---
