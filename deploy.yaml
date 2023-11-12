@@ -17,9 +17,9 @@ spec:
     spec:
       containers:
       - name: kpaas-ui
-        image: docker.io/imyujinsim/edu-msa-ui:54
+        image: docker.io/imyujinsim/edu-msa-ui:55
         ports:
-        - containerPort: 9000
+        - containerPort: 8080
 ---
 apiVersion: v1
 kind: Service
@@ -32,6 +32,6 @@ spec:
     app.kubernetes.io/name: kpaas-ui
   ports:
       # 기본적으로 그리고 편의상 `targetPort` 는 `port` 필드와 동일한 값으로 설정된다.
-    - port: 9000
-      targetPort: 9000
+    - port: 8080
+      targetPort: 8080
       nodePort: 30000
