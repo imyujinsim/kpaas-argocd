@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: kpaas-ui
-        image: docker.io/imyujinsim/edu-msa-ui:58
+        image: docker.io/imyujinsim/edu-msa-ui:1
         ports:
         - containerPort: 8080
 ---
