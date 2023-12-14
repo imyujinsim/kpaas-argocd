@@ -14,5 +14,5 @@ spec:
         app: kpaas-ui
     spec:
       containers:
-      - image: imyujinsim/edu-msa-ui:23 
+      - image: imyujinsim/edu-msa-ui:28 
         name: kpaas-ui
